@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+
+    animation: achtergrond 6s ease-in-out infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes achtergrond {
+    0% {
+        background: #f4f4f4;
+    }
+
+    50% {
+        background: #b8d8f0;
+    }
+
+    100% {
+        background: #f4f4f4;
+    }
+}
+
+
+/* Navigatie */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    background: #222;
+    color: white;
+}
+
+nav div {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hoofdgedeelte */
+
+main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* Roterend logo */
+
+.logo {
+    font-size: 80px;
+
+    animation: draaien 4s linear infinite;
+}
+
+@keyframes draaien {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Intro animatie */
+
+.intro {
+    max-width: 600px;
+
+    animation: verschijnen 1.5s ease;
+}
+
+@keyframes verschijnen {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 45px;
+    margin: 20px 0 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* Knop */
+
+.button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: #222;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+
+footer {
+    padding: 20px 40px;
+
+    background: #222;
+    color: white;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Enquête formulier */
+
+.form-blok {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 50px;
+    width: 900px;
+    max-width: 90%;
+    margin-top: 10px;
+}
+
+.form-blok h1 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.form-blok p {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 50px;
+}
+
+.veld-groep {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.veld-groep label {
+    font-size: 16px;
+}
+
+.veld {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.knop {
+    grid-column: 1 / 3;
+    justify-self: center;
+    background: #eee;
+    color: #222;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.db_table {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+.db_table td, .db_table th {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+a.knop {
+    display: inline-block;
+    margin-bottom: 15px;
+}
